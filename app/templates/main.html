@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container my-5">
+	<h class="h1">이곳은 KoreanWordDetection Api 웹사이트입니다.</h>
+	<hr>
+	<h class='h4'>아래에 이 웹사이트에서 할수 있는 멋진것들이 있습니다!! </h>
+	<div class="row my-4">
+	  <div class="col-sm-6">
+		<div class="card">
+		  <div class="card-body">
+			<h5 class="card-title">KWD가 무엇인지 궁금한가요?</h5>
+			<p class="card-text">이곳에는 KWD의 대략적인 정보와 그 원리,특징이 정리되어있습니다</p>
+			<a href="/About" class="btn btn-primary">확인하기</a>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-sm-6">
+		<div class="card">
+		  <div class="card-body">
+			<h5 class="card-title">사용 가이드</h5>
+			<p class="card-text">개발자이신가요? 이 모듈또는 Api를 사용하는 방법에 대한 도움을 얻어보세요</p>
+			<a href="/Starter" class="btn btn-primary">확인하기</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+{% endblock %}
