@@ -1,58 +1,80 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="container my-5">
-	<nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
-		<a class="navbar-brand" href="#">목차</a>
-		<nav class="nav nav-pills flex-column">
-		<a class="nav-link" href="#item-1">1.KWD이 무엇인가요</a>
-		<nav class="nav nav-pills flex-column">
-			<a class="nav-link ms-3 my-1" href="#item-1-1">원리</a>
-			<a class="nav-link ms-3 my-1" href="#item-1-2">활용할수있는곳</a>
-		</nav>
-		<a class="nav-link" href="#item-2">2.KWD의 특징은 무엇인가요</a>
-		<nav class="nav nav-pills flex-column">
-			<a class="nav-link ms-3 my-1" href="#item-2-1">2-1</a>
-			<a class="nav-link ms-3 my-1" href="#item-2-2">2-2</a>
-		</nav>
-		</nav>
-	</nav>
-	
-	<div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
-		<h4 id="item-1">1.KWD이 무엇인가요</h4>
-		<p>KWD는 KoreanWordDetection의 줄임말로 말그대로 한글 욕설을 필터링해주는 파이썬 모듈입니다.</p>
-		<h5 id="item-1-1">원리가 무엇인가요</h5>
-		<p>
-			KWD는 놀랍게도 머신러닝을 사용하지 않은 모듈입니다. 직접 Github저장소를 방문해보신다면 아시겠지만 코드는 누구나 이해할수있을정도로 간단합니다.
-			간단한 코드와는 달리 누가.어떻게 쓰느냐에 따라서 그 능력치는 배가 될수있습니다.
-			저희는 사람들이 욕설을 변형해서 사용하는 방법을 3가지로 나누었습니다. 1.비슷하게 보이게 2.발음이 비슷하게 3.한영안바꾸고 치기 로 말이죠.
-			저희는 이모든경우에 대비하여 자주사용되는 기호,문자들을 저희 방식대로 숫자를 주었죠. 비슷한 문자끼린 비슷한 숫자를 받았죠.
-			그다음 그저 각 욕설을 나타내는 숫자 조합이 문장속에 있는지를 확인하는 원리입니다.
-		</p>
-		<h5 id="item-1-2">어디에 사용할수있나요</h5>
-		<p>
-			어디에든지 사용할수있습니다. 사용가이드를 보시면 아시겠지만 그 모듈을 다운받고 그저 몇줄의 코드만 작성해주시면 어디에든지 적용할수있습니다.
-			만들고 계시는 웹게임,채팅앱,디스코드봇,또는 커뮤니티 서비스등 사람들이 글을 쓸수있는곳이라면 어디든지 적용할수있습니다.
-		</p>
-		<h4 id="item-2">2.KWD의 특징은 무엇인가요</h4>
-		<p>KWD에는 다른 한글 욕설 감지 서비스와는 다른 점들이 있습니다</p>
-		<h5 id="item-2-1">욕설의 추가가 쉽습니다</h5>
-		<p>
-			누군가가 새로운 욕설을 만들어냈나요? 여러분만의 서비스에선 금지어가 존재하나요? 걱정마세요. txt파일에 딱
-			1줄만 추가하면 되니까요...
-			KWD는 머신러닝을 쓰지 않아 새로운 욕설을 추가하기위해 다시한번 학습시킬 필요가 없습니다.
-			그저 욕설리스트에 그 욕설의 기본형태를 추가하고 로딩만 다시하면 끝납니다. 네? 이건 금칙어기반 필터링에서도 가능한 것이라고요?
-			그래요... 한번 '사과'라는 말을 금칙어라고 생각해봅시다. 만약 단순히 이 글에 저 단어가 있는지 검사하는 방식이라면,
-			여러분들은 '사구와','sa과'등의 단어들도 일일히 추가해야 할겁니다. 하지만 이럴시간이 어디있습니까? 그냥 '사과' 하나만 추가하세요
-			무엇이든지 편한게 좋은겁니다.
-		</p>
-		<h5 id="item-2-2">확장이 편합니다</h5>
-		<p>
-			이런!! 저희 모듈이 잡아내지 못하는 새로운 회피법이 나왔다고요? 누군가 유니코드표를 뒤져 'ㅣ'와 비슷한 문자를 찾아 욕설을 도배하고 있다고요?
-			걱정마세요!! 당신은 그저 Seem_layer에 그 문자를 추가하고 'ㅣ'와 비슷한 숫자를 주기만 하면 됩니다.
-			위에도 말했듯이 저희는 머신러닝을 시키지 않습니다. 그래서 새로운 기호나 문자가 등장해도 그냥 추가하면됩니다. 
-			그 문자를 위해 다시 머신러닝을 시키는 끔찍한 일은 저희의 모듈을 사용하면 절대로 일어나지 않죠.
-		</p>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example3">
+	<div class='container'>
+		<div class="row">
+			<div class="col-4">
+			<nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+				<a class="navbar-brand" href="#">목차</a>
+				<nav class="nav nav-pills flex-column">
+				<a class="nav-link active" href="#item-1">1.KWD는 무엇인가요</a>
+				<nav class="nav nav-pills flex-column">
+					<a class="nav-link ms-3 my-1" href="#item-1-1">원리</a>
+					<a class="nav-link ms-3 my-1" href="#item-1-2">활용할수있는곳</a>
+				</nav>
+				<a class="nav-link" href="#item-2">2.KWD의 특징은 무엇인가요</a>
+				<nav class="nav nav-pills flex-column">
+					<a class="nav-link ms-3 my-1" href="#item-2-1">욕설 추가가 쉽습니다</a>
+					<a class="nav-link ms-3 my-1" href="#item-2-2">새로운 욕에 대응이 쉽습니다</a>
+				</nav>
+				<a class="nav-link" href="#item-3">3.시작하기</a>
+			</nav>
+			</div>
+			<div class="col-8">
+			<div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" class="scrollspy-example-2" tabindex="0">
+				<h4 id="item-1">1.KWD이 무엇인가요</h4>
+				<p>KWD는 KoreanWordDetection의 줄임말로 말그대로 한글 욕설을 필터링해주는 파이썬 모듈입니다.</p>
+				<h5 id="item-1-1">1-1.원리가 무엇인가요</h5>
+				<p>
+					KWD는 놀랍게도 머신러닝을 사용하지 않은 모듈입니다. 직접 Github저장소를 방문해보신다면 아시겠지만 코드는 누구나 이해할수있을정도로 간단합니다.
+					간단한 코드와는 달리 누가.어떻게 쓰느냐에 따라서 그 능력치는 배가 될수있습니다.
+					저희는 사람들이 욕설을 변형해서 사용하는 방법을 3가지로 나누었습니다. 
+					<li>
+						비슷하게 보이게
+					</li>
+					<li> 
+						발음이 비슷하게
+					</li>
+					<li>
+						한영안바꾸고 치기
+					</li>
+					저희는 이 모든경우에 대비하여 자주사용되는 기호,문자들을 저희 방식대로 숫자를 주었죠. 비슷한 문자끼린 비슷한 숫자를 받았죠.
+					그다음 그저 각 욕설을 나타내는 숫자 조합이 문장속에 있는지를 확인하는 원리입니다.
+					<hr>
+				</p>
+				<h5 id="item-1-2">1-2.어디에 사용할수있나요</h5>
+				<p>
+					어디에든지 사용할수있습니다. 사용가이드를 보시면 아시겠지만 그 모듈을 다운받고 그저 몇줄의 코드만 작성해주시면 어디에든지 적용할수있습니다.
+					만들고 계시는 웹게임,채팅앱,디스코드봇,또는 커뮤니티 서비스등 사람들이 글을 쓸수있는곳이라면 어디든지 적용할수있습니다.
+					<hr>
+				</p>
+				<h4 id="item-2">2.KWD의 특징은 무엇인가요</h4>
+				<p>KWD에는 다른 한글 욕설 감지 서비스와는 다른 점들이 있습니다</p>
+				<h4 id="item-2-1">2-1.욕설의 추가가 쉽습니다</h4>
+				<p>
+					누군가가 새로운 욕설을 만들어냈나요? 여러분만의 서비스에선 금지어가 존재하나요? 걱정마세요. txt파일에 딱
+					1줄만 추가하면 되니까요...
+					KWD는 머신러닝을 쓰지 않아 새로운 욕설을 추가하기위해 다시한번 학습시킬 필요가 없습니다.
+					그저 욕설리스트에 그 욕설의 기본형태를 추가하고 로딩만 다시하면 끝납니다. 네? 이건 금칙어기반 필터링에서도 가능한 것이라고요?
+					그래요... 한번 '사과'라는 말을 금칙어라고 생각해봅시다. 만약 단순히 이 글에 저 단어가 있는지 검사하는 방식이라면,
+					여러분들은 '사구와','sa과'등의 단어들도 일일히 추가해야 할겁니다. 하지만 이럴시간이 어디있습니까? 그냥 '사과' 하나만 추가하세요
+					무엇이든지 편한게 좋은겁니다.
+				</p>
+				<h5 id="item-2-2">2-2.확장이 편합니다</h5>
+				<p>
+					이런!! 저희 모듈이 잡아내지 못하는 새로운 회피법이 나왔다고요? 누군가 유니코드표를 뒤져 'ㅣ'와 비슷한 문자를 찾아 욕설을 도배하고 있다고요?
+					걱정마세요!! 당신은 그저 Seem_layer에 그 문자를 추가하고 'ㅣ'와 비슷한 숫자를 주기만 하면 됩니다.
+					위에도 말했듯이 저희는 머신러닝을 시키지 않습니다. 그래서 새로운 기호나 문자가 등장해도 그냥 추가하면됩니다. 
+					그 문자를 위해 다시 머신러닝을 시키는 끔찍한 일은 저희의 모듈을 사용하면 절대로 일어나지 않죠.
+					<hr>
+				</p>
+				<h5 id="item-3">3.그럼 시작해볼까요?</h5>
+				<p>어서 개발 가이드를 선택하여 개발을 시작해보세요</p>
+			</div>
+			</div>
+		</div>
 	</div>
-</div>
+</body>
 {% endblock %}
+
